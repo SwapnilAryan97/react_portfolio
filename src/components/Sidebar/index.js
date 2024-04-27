@@ -13,14 +13,14 @@ const Sidebar = () => (
       <>Swapnil</>
     </Link>
     <nav>
-      <NavLink exact="true" activeclassName="active" to="/">
-        <FontAwesomeIcon icon={faHome} color="#4d4d4a"></FontAwesomeIcon>
+      <NavLink exact="true" activeclassName="active" to="/home">
+        <FontAwesomeIcon icon={faHome} color="#ffffff"></FontAwesomeIcon>
       </NavLink>
       <NavLink exact="true" activeclassName="active" className="about-link" to="/about">
-        <FontAwesomeIcon icon={faUser} color="#4d4d4a"></FontAwesomeIcon>
+        <FontAwesomeIcon icon={faUser} color="#ffffff"></FontAwesomeIcon>
       </NavLink>
       <NavLink exact="true" activeclassName="active" className="contact-link" to="/contact">
-        <FontAwesomeIcon icon={faEnvelope} color="#4d4d4a"></FontAwesomeIcon>
+        <FontAwesomeIcon icon={faEnvelope} color="#ffffff"></FontAwesomeIcon>
       </NavLink>
     </nav>
   </div>
