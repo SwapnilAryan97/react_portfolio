@@ -37,7 +37,6 @@ const Sidebar = () => (
     <ul>
       <li>
         <a
-          target="_blank"
           rel="nonreferrer"
           href="https://www.linkedin.com/in/swapnilaryansinha/"
         >
@@ -46,7 +45,6 @@ const Sidebar = () => (
       </li>
       <li>
         <a
-          target="_blank"
           rel="nonreferrer"
           href="https://github.com/SwapnilAryan97"
         >
