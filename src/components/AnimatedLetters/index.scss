@@ -3,13 +3,15 @@
   opacity: 0;
   animation: bounceIn 0.5s 0.5s;
   animation-fill-mode: forwards;
-  min-width: 7px;
+  min-width: 10px;
+  font-weight: 400;
 }
 
 .text-animate-hover {
-  min-width: 7px;
+  min-width: 10px;
   display: inline-block;
   animation-fill-mode: both;
+  font-weight: 400;
 
   &:hover {
     animation: rubberBand 1s;
