@@ -1,20 +1,18 @@
 import { Link } from 'react-router-dom'
-import Logotitle from '../../assets/images/logo-s.png'
+// import Logotitle from '../../assets/images/logo-s.png'
 import './index.scss'
 
 const Home = () => {
   return (
     <div className="container home-page">
       <div className="text-zone">
-        <h1>
-          Hi, <br /> I'm
-        <img className="single-logo" src={Logotitle} alt="developer" />
-        wapnil
+        <div className="coding-text">Hi, my name is</div>
+        <h1 className="less-font fade-in-1">Swapnil Aryan Sinha</h1>
+        <h1 className="fade-color fade-in-2">
+          I build things for the Web <br />
         </h1>
-        <br />
-        Software Engineer
-        <h2>Backend Developer</h2>
-        <Link to="/connect" className="flat-buttom">
+        <h2>H2 line here</h2>
+        <Link to="/connect" className="flat-button">
           CONTACT ME
         </Link>
       </div>
