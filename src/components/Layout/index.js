@@ -7,7 +7,7 @@ import './index.scss'
 const Layout = () => {
   return (
     <div className="App">
-      {/* <Sidebar /> */}
+//       <Navbar />
       <div className="page">
         <span className="tags top-tags">{/* Body */}</span>
         <Outlet />
