@@ -24,7 +24,7 @@ code {
 }
 
 
-@media all and (max-width: 50px)   {  .html  { font-size:0.1em;  } }
+/* @media all and (max-width: 50px)   {  .html  { font-size:0.1em;  } }
 @media all and (max-width: 100px)  {  .html  { font-size:0.2em;  } }
 @media all and (max-width: 200px)  {  .html  { font-size:0.4em;  } }
 @media all and (max-width: 300px)  {  .html  { font-size:0.6em;  } }
@@ -42,4 +42,4 @@ code {
 @media all and (max-width: 1500px) {  .html  { font-size:3.0em;  } }
 @media all and (max-width: 1500px) {  .html  { font-size:3.2em;  } }
 @media all and (max-width: 1600px) {  .html  { font-size:3.4em;  } }
-@media all and (max-width: 1700px) {  .html  { font-size:3.6em;  } }
+@media all and (max-width: 1700px) {  .html  { font-size:3.6em;  } } */
