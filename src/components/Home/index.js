@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 // import Logotitle from '../../assets/images/logo-s.png'
+import Logo from './Logo'
 import './index.scss'
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
@@ -51,11 +52,13 @@ const Home = () => {
 
         {/* <h1 className="less-font fade-in-1">Swapnil Aryan Sinha</h1> */}
 
-        {/* <h2>H2 line here</h2> */}
+        <h2>FullStack Developer</h2>
+        <br/>
         <Link to="/connect" className="flat-button">
           CONTACT ME
         </Link>
       </div>
+      <Logo/>
     </div>
   )
 }
