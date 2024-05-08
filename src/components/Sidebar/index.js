@@ -14,12 +14,12 @@ const Sidebar = () => (
       <>Swapnil</>
     </Link>
     <nav>
-      <NavLink exact="true" activeclassName="active" to="/home">
+      <NavLink exact="true" activeclassname="active" to="/home">
         <FontAwesomeIcon icon={faHome} color="#ffffff"></FontAwesomeIcon>
       </NavLink>
       <NavLink
         exact="true"
-        activeclassName="active"
+        activeclassname="active"
         className="about-link"
         to="/about"
       >
@@ -27,7 +27,7 @@ const Sidebar = () => (
       </NavLink>
       <NavLink
         exact="true"
-        activeclassName="active"
+        activeclassname="active"
         className="contact-link"
         to="/contact"
       >
@@ -44,10 +44,7 @@ const Sidebar = () => (
         </a>
       </li>
       <li>
-        <a
-          rel="nonreferrer"
-          href="https://github.com/SwapnilAryan97"
-        >
+        <a rel="nonreferrer" href="https://github.com/SwapnilAryan97">
           <FontAwesomeIcon icon={faGithub} color="#ffffff" />
         </a>
       </li>
