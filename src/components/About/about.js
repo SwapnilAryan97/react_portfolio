@@ -1,5 +1,5 @@
 import AnimatedLetters from '../AnimatedLetters'
-import './index.scss'
+import './about.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from 'react'
 import {
@@ -20,13 +20,13 @@ const About = () => {
   useEffect(() => {
     setTimeout(() => {
       setLetterClass('text-animate-hover')
-    }, 4000)
+    }, 3000)
   }, [])
 
     return (
       <>
         <div className="container about-page">
-          <div className="'text-zone">
+          <div className="text-zone">
             <h1>
               <AnimatedLetters
                 letterClass={letterClass}
