@@ -54,7 +54,7 @@ const Home = () => {
 
         <h2>FullStack Developer</h2>
         <br/>
-        <Link to="/connect" className="flat-button">
+        <Link to="/contact" className="flat-button">
           CONTACT ME
         </Link>
       </div>
