@@ -1,6 +1,8 @@
 ## Workflow Status
 [![Node.js CI](https://github.com/SwapnilAryan97/react_portfolio/actions/workflows/node.js.yml/badge.svg)](https://github.com/SwapnilAryan97/react_portfolio/actions/workflows/node.js.yml)
 
+[![Production Workflow](https://github.com/SwapnilAryan97/react_portfolio/actions/workflows/prod.yml/badge.svg)](https://github.com/SwapnilAryan97/react_portfolio/actions/workflows/prod.yml)
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

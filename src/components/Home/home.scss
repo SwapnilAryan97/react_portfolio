@@ -1,11 +1,15 @@
 .home-page {
+  margin-left: 7%;
+  // margin-right: 5%;
+  // padding-right: 5%;
+
   .text-zone {
     position: absolute;
-    left: 15%;
+    // left: 15%;
     top: 40%;
     transform: translateY(-50%);
-    width: 100%;
-    max-height: 90%;
+    // width: 100%;
+    // max-height: 90%;
     // font-family: 'Coolvetica';
     font-size: 1em;
   }
@@ -15,13 +19,13 @@
     animation: fadeIn 1s 1.3s backwards;
 
     &::before {
-      font-family: 'Inter-Regular';
+      font-family: 'sans-serif';
       // position: absolute;
       // left: 15px;
     }
 
     &::after {
-      font-family: 'Inter-Regular';
+      font-family: 'sans-serif';
       animation: fadeIn 1s 1.4s backwards;
     }
 
@@ -34,6 +38,21 @@
       animation: rotateIn 1s linear both;
       animation-delay: 1.4s;
     }
+  }
+  .first-h1 {
+    font-size: 2.2em;
+  }
+
+  .second-h1 {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  .third-h1 {
+    margin-top: -5px;
+    margin-right: 3%;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    font-size: 3em;
   }
   .single-logo {
     width: 32px;
@@ -50,9 +69,17 @@
     animation: fadein 1s 2.8s backwards;
   }
 
+  p {
+    font-size: 1.5em;
+    margin-top: 40px;
+    // margin-bottom: 5%;
+    margin-right: 40%;
+    padding-right: 5%;
+  }
+
   .flat-button {
     color: #ffd700;
-    font-size: 1.5em;
+    font-size: 1.7em;
     letter-spacing: 1px;
     font-family: sans-serif;
     text-decoration: none;
@@ -60,10 +87,11 @@
     border: 1px solid #ffd700;
     animation: fadein 1s 2.8s backwards;
     white-space: nowrap;
+    padding: 10px;
 
     &:hover {
       background: #ffd700;
-      color: #333
+      color: #333;
     }
   }
 
@@ -73,7 +101,7 @@
 
   .fade-color {
     color: #ffffff83;
-    margin-top: -50px;
+    // margin-top: -50px;
   }
 
   .fade-in-1 {
@@ -81,5 +109,84 @@
   }
   .fade-in-2 {
     animation: fadeIn 1s 3s backwards;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .tags,
+  .home-page h1:before,
+  .home-page h1:after {
+    display: none;
+    font-size: 0.6em;
+  }
+
+  .home-page .text-zone {
+    position: initial;
+    // width: 100%;
+    transform: none;
+    padding: 2px;
+    box-sizing: border-box;
+    font-size: 0.8em;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    h1 {
+      font-size: 3em;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: auto;
+      padding: 0;
+    }
+
+    p {
+      font-size: 1.5em;
+      // margin-top: 40px;
+      margin-bottom: 5%;
+      margin-right: 10%;
+      margin-top: 5px;
+    }
+
+    .first-h1 {
+      font-size: 2em;
+    }
+
+    .second-h1 {
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+    }
+    .third-h1 {
+      margin-top: -5px;
+      margin-right: 3%;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      font-size: 2em;
+    }
+  }
+
+  .home-page .flat-button {
+    float: none;
+    display: block;
+    // margin: 20px auto 0 auto;
+    width: 124px;
+  }
+
+  .logo-container {
+    position: relative;
+    width: 100px;
+    height: auto;
+    top: 50px;
+    right: 0;
+    box-sizing: border-box;
+    margin: auto;
+    left: 0;
+  }
+
+  .logo-container svg {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    margin: auto;
   }
 }
