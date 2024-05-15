@@ -7,7 +7,7 @@ const LAYOUT_COMPONENT = 'Layout component'
 const HOME_COMPONENT = 'Home component'
 
 // Mock components used in the routes
-jest.mock('./components/Layout', () => () => LAYOUT_COMPONENT)
+jest.mock('./components/Layout/layout', () => () => LAYOUT_COMPONENT)
 
 
 describe('App component', () => {

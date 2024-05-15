@@ -15,10 +15,14 @@ $primary-color: #ffd700;
   font-family: 'Coolvetica';
   src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
 }
+@font-face {
+  font-family: 'Inter-Regular';
+  src: url('./assets/fonts/Inter-Regular.ttf') format('ttf');
+}
 
 input,
 textarea {
-  font-family: 'Helvetica Neue';
+  font-family: 'Inter-Regular';
 }
 
 .loader-hidden {

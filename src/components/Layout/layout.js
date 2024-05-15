@@ -1,13 +1,13 @@
 import { Outlet } from 'react-router-dom'
-// import Sidebar from '../Sidebar'
+import Sidebar from '../Sidebar/sidebar'
 // import Navbar from '../Navbar'
-import './index.scss'
+import './layout.scss'
 // import Home from '../Home'
 
 const Layout = () => {
   return (
     <div className="App">
-       {/* <Navbar /> */}
+       <Sidebar />
       <div className="page">
         <span className="tags top-tags">{/* Body */}</span>
         <Outlet />

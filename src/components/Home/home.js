@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 // import Logotitle from '../../assets/images/logo-s.png'
 import Logo from './Logo'
-import './index.scss'
+import './home.scss'
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 
@@ -26,7 +26,7 @@ const Home = () => {
         {/* <div className={letterClass}>Hi</div>
         <div className={`${letterClass} _12`}>,</div>
         <div className={`${letterClass} _12`}>my name is</div> */}
-        <div className="coding-text">Hi, my name is</div>
+        <div className="coding-text double-font-size">Hi, my name is</div>
         <h1>
           <AnimatedLetters
             letterClass={letterClass}
@@ -53,12 +53,12 @@ const Home = () => {
         {/* <h1 className="less-font fade-in-1">Swapnil Aryan Sinha</h1> */}
 
         <h2>FullStack Developer</h2>
-        <br/>
+        <br />
         <Link to="/contact" className="flat-button">
           CONTACT ME
         </Link>
       </div>
-      <Logo/>
+      <Logo />
     </div>
   )
 }
