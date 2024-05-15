@@ -52,7 +52,7 @@ const Home = () => {
 
         {/* <h1 className="less-font fade-in-1">Swapnil Aryan Sinha</h1> */}
 
-        <p>
+        <p className="text-box">
           Welcome to my corner of the web! I'm a Developer with a passion for
           building dynamic and responsive websites. My journey in Software
           Development spans over several years, during which I've had the
@@ -60,7 +60,10 @@ const Home = () => {
           e-commerce platforms to innovative AI applications.
         </p>
 
-        <p>This webpage is still a WIP, till then feel free to explore and give feedback!</p>
+        <p>
+          This webpage is still a WIP, till then feel free to explore and give
+          feedback!
+        </p>
         <br />
         <Link to="/about" className="flat-button">
           Learn More {'\u2192'}
