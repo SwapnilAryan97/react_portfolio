@@ -1,15 +1,13 @@
-name: Production Workflow
+name: Test Workflow on Pull Request
 
 on:
-  push:
+  pull_request:
     branches:
-      - 'master'
-    tags:
-      - 'v*'
+      - 'dev'  # This triggers on pull requests to the 'dev' branch
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # This specifies the GitHub Actions runner environment
 
     strategy:
       matrix:
@@ -28,9 +26,10 @@ jobs:
       - run: npm test
         env:
           EMAILJS_PUBLIC_KEY: ${{ secrets.EMAIL_TOKEN }}
+          # Add any additional environment variables needed for testing
 
   build-container:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Runner environment for building the Docker container
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -38,19 +37,15 @@ jobs:
       - name: Login to Heroku Container Registry
         run: docker login --username=${{ secrets.HEROKU_EMAIL }} --password=${{ secrets.HEROKU_API_KEY }} registry.heroku.com
 
-      - name: Build Docker image
-        run: docker build -t registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web -f Dockerfile .
+      - name: Build and push Docker image
+        run: docker build -t ${{ secrets.DOCKER_IMAGE_NAME }} -f Dockerfile .
 
-      - name: Push Docker image to Heroku registry
-        run: docker push registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
-
+      - name: Tag docker image and heroku registry
+        run: docker tag ${{ secrets.DOCKER_IMAGE_NAME }} registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
+        
       - name: Install Heroku CLI
         run: |
           curl https://cli-assets.heroku.com/install.sh | sh
+          heroku apps
+          heroku sessions
 
-      - name: Release Docker image
-        run: |
-          heroku container:push web --app ${{ secrets.HEROKU_APP_NAME }}
-          heroku container:release web --app ${{ secrets.HEROKU_APP_NAME }}
-        env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
