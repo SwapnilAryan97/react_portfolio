@@ -78,6 +78,45 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # Docker 
 build
 
-`docker build -t swapnilsinha/portfolio:1.0 . `
+`docker build -t <username>/<appname>:<tag> . `
 `docker ps`
 `docker images`
+
+
+## FAQ
+
+### What does the "unsupported architecture arm64" error mean when pushing a Docker image to Heroku?
+
+The error message "unsupported architecture arm64" suggests that you're trying to push a Docker image built for the ARM64 architecture to Heroku, but Heroku currently only supports the AMD64 architecture for Docker images.
+
+To resolve this issue, you need to build your Docker image specifically for the AMD64 architecture. If you're using a machine with an ARM64 processor (like the M1 Macs), you can use Docker's buildx tool to build multi-architecture images.
+
+Here's how you can do it:
+
+1. **Create a new builder instance**
+
+    ```bash
+    docker buildx create --name mybuilder
+    ```
+
+2. **Switch to the new builder instance**
+
+    ```bash
+    docker buildx use mybuilder
+    ```
+
+3. **Start up the builder instance**
+
+    ```bash
+    docker buildx inspect --bootstrap
+    ```
+
+4. **Build the image**
+
+    ```bash
+    docker buildx build --platform linux/amd64 -t <username>/<appname>:<tag> . --load
+    ```
+
+    This command tells Docker to build the image for the `linux/amd64` platform.
+
+After building the image, you can push it to Heroku as before. Remember to tag the image correctly for Heroku before pushing it.
