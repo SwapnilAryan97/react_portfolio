@@ -79,7 +79,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 build
 
 `docker build -t <username>/<appname>:<tag> . `
+
 `docker ps`
+
 `docker images`
 
 
@@ -116,7 +118,16 @@ Here's how you can do it:
     ```bash
     docker buildx build --platform linux/amd64 -t <username>/<appname>:<tag> . --load
     ```
-
     This command tells Docker to build the image for the `linux/amd64` platform.
 
-After building the image, you can push it to Heroku as before. Remember to tag the image correctly for Heroku before pushing it.
+    After building the image, you can push it to Heroku as before. Remember to tag the image correctly for Heroku before pushing it.
+
+5. **Push and Deploy**
+
+    ```
+    docker push registry.heroku.com/<appname>/web
+    ```
+
+    ```
+    heroku container:release web --app <appname>
+    ```
