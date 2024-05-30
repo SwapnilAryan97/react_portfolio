@@ -19,15 +19,21 @@ nav ul {
 
 nav li {
   height: 50px;
-  padding: 0 20px 0 20px;
-  align-items: center;
+  margin: 0 20px 0 20px;
+  // align-items: center;
+  padding: 0;
 }
 
-// nav li:first-child {
-//   margin-right: auto;
+// nav li:last-child {
+//   display: none;
 // }
 
-nav a{
+nav li:first-child {
+  margin-left: auto;
+  align-items: right;
+}
+
+nav a {
   height: 100%;
   padding: 0 5px 0 15px;
   text-decoration: none;
@@ -59,10 +65,22 @@ nav a:hover {
   justify-content: flex-start;
   align-items: flex-start;
 
+  @media (max-width: 1200px) {
+    width: 30%;
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 }
 
 .sidebar li {
   width: 100%;
+  margin-left: 0;
 }
 
 .sidebar a {
@@ -74,21 +92,23 @@ nav a:hover {
     display: none;
   }
   .sidebar {
-    width: 45%;
+    width: 50%;
   }
 
-  nav li{
+  nav li {
     justify-content: center;
+    // margin-left: auto;
   }
-
 }
 @media screen and (max-width: 500px) {
-
+  .hideOnMobile {
+    display: none;
+  }
   .sidebar {
     width: 100%;
   }
 
-  nav li{
+  nav li {
     justify-content: center;
   }
 }

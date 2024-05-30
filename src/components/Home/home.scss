@@ -9,7 +9,8 @@ $color-gray-dark: #45434335;
   color: $color-white;
   margin-left: 0%;
   width: 100%;
-  // margin-right: 5%;
+  margin-left: 2%;
+  margin-top: 3.5%;
   // padding-right: 5%;
 
   .text-zone {
@@ -27,6 +28,7 @@ $color-gray-dark: #45434335;
   h1 {
     font-size: 5em;
     animation: fadeIn 1s 1.3s backwards;
+    font-weight: 500;
 
     &::before {
       font-family: 'sans-serif';
@@ -53,8 +55,7 @@ $color-gray-dark: #45434335;
     font-size: 2.2em;
   }
 
-  .second-h1,
-  .third-h1 {
+  .second-h1 {
     margin-bottom: 0;
     padding-bottom: 0;
   }
@@ -65,6 +66,7 @@ $color-gray-dark: #45434335;
     margin-bottom: 15px;
     padding-bottom: 5px;
     font-size: 3em;
+    font-weight: 700;
   }
   .single-logo {
     width: 32px;
@@ -143,6 +145,8 @@ $color-gray-dark: #45434335;
   .home-page h1:after {
     display: none;
     font-size: 0.6em;
+    margin-top: 3.5%;
+    margin-top: 20px;
   }
 
   .home-page {
@@ -168,7 +172,7 @@ $color-gray-dark: #45434335;
         margin-bottom: 5%;
         animation: fadeIn 1s 3s backwards;
       }
-      
+
       .text-box {
         // display: inline-block;
         // margin-right: -5%;
