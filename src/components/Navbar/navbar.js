@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <ul className="sidebar">
+      <ul className="sidebar nav-bar">
         <li onClick={closeSideBar}>
           <a href="#">
             <svg
